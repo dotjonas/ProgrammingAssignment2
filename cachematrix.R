@@ -1,15 +1,15 @@
 
 ## Creates a list of functions that gets/sets values and means to a vector
 
-makeCacheMatrix <- function(x = matrix()) {
-      meanValue <- NULL                                       #Set the mean to NULL
-      set <- function(y){
-            x <- y                                         # '<<-' searches parent env for definition
-            meanvalue <<- NULL
+makeCacheMatrix <- function(x = matrix()) {                 # function takes matrix x as argument
+      meanVal <- NULL                                      
+      set <- function(y){                                   # set assigns a value y to matrix x
+            x <- y                                          
+            meanVal <<- NULL                                # and makes sure all mean values are NULL
       }
-      get <- function() x
-      setmatrix <- function(solve) meanValue <<- solve
-      getmatrix <- function() meanValue
+      get <- function() x                                   # get either calculates inverse of matrix x or gets calculated values
+      setmatrix <- function(solve) meanVal <<- solve        # calculate ivnerse meanVals
+      getmatrix <- function() meanVal                       # ...or getsexisting mean values
       list(set = set, get = get,
            setmatrix = setmatrix,
            getmatrix = getmatrix)
