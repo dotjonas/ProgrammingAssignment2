@@ -1,5 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
 
 ## Creates a list of functions that gets/sets values and means to a vector
 
